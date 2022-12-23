@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity{
                 break;
             case 4:
                 image.setImageResource(R.drawable.lotustemple);
-                option1.setText("QutubMinar");
+                option1.setText("Qutub Minar");
                 option2.setText("TajMahal");
                 option3.setText("Golden Temple");
                 option4.setText("Lotus Temple");

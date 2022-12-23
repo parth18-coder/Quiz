@@ -21,24 +21,4 @@ public class Ques {
     {
         return questionsid;
     }
-
-    // setting the question passed
-    public void setAnswerResId(int correctanswerid)
-    {
-        this.correctanswerid = correctanswerid;
-    }
-
-    // returning the correct answer
-    // of question
-    public int isAnswerTrue()
-    {
-        return correctanswerid;
-    }
-
-    // setting the correct
-    // ans of question
-    public void setAnswerTrue(int answerTrue)
-    {
-        this.correctanswerid = answerTrue;
-    }
 }
