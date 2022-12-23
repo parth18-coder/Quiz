@@ -9,14 +9,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity{
 
-    // to keep current question track
+    // to keep current question and marks track
     private int currentQuestionIndex = 0;
-
     int marks=0;
+    int count=0;
 
 
 
@@ -29,6 +30,9 @@ public class MainActivity extends AppCompatActivity{
     private CheckBox option4;
     private Button nextButton;
     private TextView result;
+    private ProgressBar progressBar;
+    private int progress=0;
+    private TextView questionAttempted;
 
 
     //array of questions and answers
@@ -59,12 +63,23 @@ public class MainActivity extends AppCompatActivity{
         option4=(CheckBox) findViewById(R.id.option_d);
         nextButton=(Button) findViewById(R.id.next_button);
         result=(TextView) findViewById(R.id.marks);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        questionAttempted=(TextView) findViewById(R.id.question_attempted);
 
+
+        //applying on click listener on the next button
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // go to next question
                 // limiting question bank range
+
+                if(option1.isChecked()||option2.isChecked()||option3.isChecked()||option4.isChecked()){
+                    progress=progress+1;
+                    progressBar.setProgress(progress);
+                    count=count+1;
+                    questionAttempted.setText(count+"/5");
+                }
 
 
                 if (currentQuestionIndex <= 5) {
@@ -85,11 +100,7 @@ public class MainActivity extends AppCompatActivity{
 
                     if (currentQuestionIndex == 4) {
                         updateQuestion();
-                        //result.setText(marks);
                         nextButton.setText("RESULT");
-
-                        //prevButton.setVisibility(
-                        //View.INVISIBLE);
                     } else {
                         updateQuestion();
                     }
