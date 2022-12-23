@@ -2,43 +2,43 @@ package com.example.quiz;
 
 public class Ques {
     // answerResId will store question
-    private int answerResId;
+    private int questionsid;
 
     // answerTrue will store correct answer
     // of the question provided
-    private boolean answerTrue;
+    private int correctanswerid;
 
-    public Ques(int answerResId, boolean answerTrue)
+    public Ques(int questionsid, int correctanswerid)
     {
         // setting the values through
         // arguments passed in constructor
-        this.answerResId = answerResId;
-        this.answerTrue = answerTrue;
+        this.questionsid = questionsid;
+        this.correctanswerid = correctanswerid;
     }
 
     // returning the question passed
-    public int getAnswerResId()
+    public int getQuestionId()
     {
-        return answerResId;
+        return questionsid;
     }
 
     // setting the question passed
-    public void setAnswerResId(int answerResId)
+    public void setAnswerResId(int correctanswerid)
     {
-        this.answerResId = answerResId;
+        this.correctanswerid = correctanswerid;
     }
 
     // returning the correct answer
     // of question
-    public boolean isAnswerTrue()
+    public int isAnswerTrue()
     {
-        return answerTrue;
+        return correctanswerid;
     }
 
     // setting the correct
     // ans of question
-    public void setAnswerTrue(boolean answerTrue)
+    public void setAnswerTrue(int answerTrue)
     {
-        this.answerTrue = answerTrue;
+        this.correctanswerid = answerTrue;
     }
 }

@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">Quiz</string>
     <string name="question1">What is the name of this Monument?</string>
-    <string name="question2">What built this monument?</string>
+    <string name="question2">Who built this monument?</string>
     <string name="question3">Where is this monument?</string>
     <string name="question4">When was this monument built?</string>
     <string name="question5">What is the name of this Monument?</string>
+    <string name="answer1">Taj Mahal</string>
+    <string name="answer2">Shah Jahan</string>
+    <string name="answer3">Amritsar</string>
+    <string name="answer4">1215</string>
+    <string name="answer5">Lotus Temple</string>
 </resources>
